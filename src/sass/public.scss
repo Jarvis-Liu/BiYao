@@ -111,7 +111,6 @@ body {
 	background-color: #f0f0f0;
 }
 
-
 #top_right li:last-of-type {
 	width: 110px;
 	background-color: #523669;
@@ -125,4 +124,103 @@ body {
 }
 #shopCar {
 	padding-left: 4px;
+}
+
+.footer {
+	width:100%;
+	margin-top:60px;
+	background:#fff;
+	position: relative;
+	.footer01 {
+		width:1080px;
+		margin:0 auto;
+		text-align:center;
+		.footer-serve {
+			border-bottom:1px solid #ccc;
+			li {
+				float:left;
+				width:270px;
+				height:120px;
+				img {
+					vertical-align:middle;
+				}
+				span {
+					font-size:16px;
+					color:#333;
+					margin-left:15px;
+					line-height:120px;
+				}
+			}
+		}
+	}
+	.footer02 {
+		width:1080px;
+		margin:30px auto 0px;
+		.footer-detail {
+			float:left;
+			padding-left:50px;
+			texr-align:left;
+			border-right:1px solid #ccc;
+			>li {
+				float:left;
+				margin-right:120px;
+				h2 {
+					font-size:16px;
+					color:#333;
+					font-weight:400;
+				}
+				ul {
+					margin-top:30px;
+					font-size:12px;
+					li {
+						margin-bottom:10px;
+						a {
+							color:gray;
+							font-size:12px;
+						}
+					}
+				}
+				img {
+					width:105px;
+					height:105px;
+					margin-top:15px;
+				}
+			}
+		}
+		.footer-right {
+			float:right;
+			margin-right:80px;
+			text-algin:center;
+			p {
+				font-size:16px;
+				color:#333;
+			}
+			span {
+				margin-top:30px;
+				font-size:12px;
+				color:gray;
+				display:block;
+			}
+		}
+	}
+	.footer-info {
+		margin:0 auto;
+		width:1080px;
+		margin-top:60px;
+		padding-bottom:10px;
+		font-szie:12px;
+		color:gray;
+		text-align:center;
+		p {
+			margin-bottom:10px;
+			span {
+				display:inline-block;
+				margin:0 10px;
+				font-weight:400;
+				a {
+					color:gray;
+				}
+			}
+		}
+	}
 }

@@ -9,7 +9,7 @@ body {
 img {
 	border: none;
 }
-ul,ol {
+ul,ol,dl {
 	list-style: none;
 	padding-left: 0px;
 }
@@ -30,4 +30,7 @@ input[type = "button"] {
 }
 input {
 	outline:none;
+}
+b,i {
+	font-style:normal;
 }
