@@ -42,8 +42,54 @@ body {
 	height: 30px;
 	font-weight: normal;
 }
-
-
+#top_right li:nth-of-type(2) div {
+	position: absolute;
+	top:25px;
+	left: -38px;
+	z-index: 115;
+	display:none;
+	i {
+		position: relative;
+		z-index: 1;
+		display: block;
+		width: 30px;
+		height: 15px;
+		margin: 0 auto;
+		background: url(../images/triangle.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	dl {
+		padding: 15px 10px 10px;
+		border-radius:4px;
+		background: #fff;
+		box-shadow: 0 1px 10px 4px rgba(0,0,0,0.05);
+		dt {
+			width: 40px;
+			height: 40px;
+			margin: 0 auto;
+			background: url(../images/appLogo.png);
+			background-size: 100% 100%;
+		}
+		dd {
+			margin-top: 10px;
+			line-height: 24px;
+			font-size: 12px;
+			color: #523669;
+			text-align: center;
+			display: block;
+			p {
+				width: 130px;
+				height: 130px;
+				margin: 10px auto 0;
+				background: url(../images/app.png);
+				background-size: 100% 100%;
+			}
+		}
+	}
+}
+#top_right li:nth-of-type(2):hover div {
+	display: block;
+}
 #msg {
 	display: inline-block;
 	width: 16px;
@@ -124,6 +170,50 @@ body {
 }
 #shopCar {
 	padding-left: 4px;
+}
+
+#nav-box {
+	padding-top: 30px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#nav-box a:hover {
+	color: #f8b200;
+}
+
+nav {
+	width: 1080px;
+	position: relative;
+	margin: 0 auto;
+	height: 115px;
+}
+
+.nav-search {
+	width: 540px;
+	float: right;
+}
+
+.nav-search p {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+#serch-msg {
+	display: inline-block;
+	padding-left: 10px;
+	width: 488px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 16px;
+	border: 0px;
+}
+#serch-msg + input {
+	cursor: pointer;
+	height: 38px;
+	width: 39px;
+	border-left: 1px solid #ccc;
+	background: url(../images/search.png)no-repeat 50% 50%;
+	vertical-align: middle;
 }
 
 .footer {
@@ -222,5 +312,170 @@ body {
 				}
 			}
 		}
+	}
+}
+
+.rightBar {
+	margin-left: 550px;
+	display: inline-block;
+	position: fixed;
+	left: 50%;
+	bottom: 100px;
+	z-index: 100;
+	height: 144px;
+	li {
+		width: 48px;
+		height: 48px;
+		cursor: pointer;
+	}
+	.rightBar-serve {
+		display:none;
+		background: url(../images/shirt/rightBar-serve.png);
+	}
+	.rightBar-phone {
+		display: none;
+		background:url(../images/shirt/rightBar-phone.png);
+	}
+	.rightBar-share {
+		background: url(../images/shirt/rightBar-share.png);
+	}
+	.rightBar-share:hover {
+		background: url(../images/shirt/rightBar-shareActive.png);
+	}
+	.rightBar-code {
+		background:url(../images/shirt/rightBar-code.png);
+		div {
+			position: absolute;
+			top:10px;
+			left:-310px;
+			display:none;
+			width: 301px;
+			border-radius:4px;
+			box-shadow: 0 1px 10px 4px rgba(0,0,0,0.05);;
+			background:#fff;
+			span {
+				position: absolute;
+				top:50%;
+				right: -15px;
+				z-index:102;
+				display: inline-block;
+				width: 15px;
+				height: 30px;
+				margin-top: -14px;
+				background:url(../images/shirt/right-triangle.png)no-repeat;
+				background-size: 100% 100%;
+			}
+			dl {
+				float: left;
+				display: block;
+				padding: 10px;
+				dt {
+					width: 130px;
+					height: 130px;
+					background:url(../images/shirt/app.png)no-repeat;
+					background-size:100% 100%;
+				}
+				dd {
+					margin-top: 10px;
+					text-align: center;
+					color: #523669;
+					font-size: 14px;
+				}
+			}
+			.code-public {
+				padding: 4px 4px 10px;
+				dt {
+					width: 143px;
+					height: 143px;
+					background:url(../images/shirt/wxCode.jpg)no-repeat;
+					background-size:100% 100%;
+				}
+				dd {
+					margin-top: 3px;
+					text-align: center;
+					color: #523669;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.rightBar-code:hover{
+				background:url(../images/shirt/rightBar-codeActive.png)no-repeat;
+				div {
+					display: block;
+				}
+			}
+	.rightBar-top {
+		display: none;
+		background:url(../images/shirt/rightBar-top.png)no-repeat;
+	}
+	.rightBar-top:hover {
+		background:url(../images/shirt/rightBar-topActive.png)no-repeat;
+	}
+}
+
+.flow-search {
+	display:none;
+	width: 100%;
+	height:60px;
+	background: #fff;
+	position: fixed;
+	top:-60px;
+	z-index:9999;
+	.flow-box {
+		margin:0 auto;
+		width: 1080px;
+		height:60px;
+		.nav-list {
+			display:none;
+		}
+		.flow-sort>p{
+			width: 90px;
+			height:60px;
+			line-height: 60px;
+			color:gray;
+			font-size: 16px;
+			cursor:pointer;
+			i {
+				display: inline-block;
+				width: 15px;
+				height: 8px;
+				margin-left: 10;
+				background:url(../images/categoryDown.png);
+			}
+		}
+		.flow-sort>p:hover {
+			i {
+				background:url(../images/categoryUp.png);
+			}
+		}
+		
+		.nav-search {
+			height:40px;
+			position: relative;
+			top:-50px;
+			ul {
+				display:none;
+				position: absolute;
+				top:42px;
+				width: 308px;
+				padding: 10px 0;
+				background: #fff;
+				box-shadow: 1px 0 15px 5px rgba(0,0,0,0.05);
+				li {
+					width: 100%;
+					height: 32px;
+					padding: 0 10px;
+					line-height: 32px;
+					font-size: 12px;
+					color: #333;
+					cursor:pointer;
+					display: block;
+				}
+			}
+		}
+	}
+	.nav-list {
+		top:60px;
 	}
 }

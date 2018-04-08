@@ -1,46 +1,3 @@
-#nav-box {
-	padding-top: 30px;
-	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-#nav-box a:hover {
-	color: #f8b200;
-}
-
-nav {
-	width: 1080px;
-	position: relative;
-	margin: 0 auto;
-	height: 115px;
-}
-
-.nav-search {
-	width: 540px;
-	float: right;
-}
-
-.nav-search p {
-	border: 1px solid #ccc;
-	border-radius: 3px;
-}
-#serch-msg {
-	display: inline-block;
-	padding-left: 10px;
-	width: 488px;
-	height: 38px;
-	line-height: 38px;
-	font-size: 16px;
-	border: 0px;
-}
-#serch-msg + input {
-	cursor: pointer;
-	height: 38px;
-	width: 39px;
-	border-left: 1px solid #ccc;
-	background: url(../images/search.png)no-repeat 50% 50%;
-	vertical-align: middle;
-}
 
 .nav-search ul li {
 	float: left;
@@ -90,7 +47,6 @@ nav {
 .nav-tab ul li a {
 	color: #333;
 }
-
 
 /***********************banner**********************/
 
