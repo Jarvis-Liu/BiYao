@@ -62,11 +62,10 @@
 	overflow: hidden;
 }
 #banner-slider li {
-	opacity: 0;
 	position: absolute;
 }
 #banner #banner-slider .show {
-	opacity: 1;
+	display:block;
 }
 #banner-slider:hover span{
 	display: block;
@@ -286,45 +285,56 @@
 		width:100%;
 		height:280px;
 		overflow:hidden;
-	}
-	ul li {
-		position:absolute;
-		padding-left:10px;
-		background-color:#fff;
+		li {
+			margin-left: 10px;
+			width: 82px;
+			height: 280px;
+			float: left;
+			display: inline-block;
+			position: relative;
+			background-color: #fff;
+			overflow: hidden;
+			a {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+			}
+		}
 	}
 	li:first-of-type {
-		padding-left:0px;
+		margin-left: 0;
 		left:0px;
+		width: 620px;
+		background: url(../images/cul01.jpg) no-repeat;
 	}
 	li:nth-of-type(2) {
-		left:620px;
+		background: url(../images/cul02.jpg) no-repeat;
 	}
 	li:nth-of-type(3) {
-		left:712px;
+		background: url(../images/cul03.jpg) no-repeat;
 	}
 	li:nth-of-type(4) {
-		left:804px;
+		background: url(../images/cul04.jpg) no-repeat;
 	}
 	li:nth-of-type(5) {
-		left:896px;
+		background: url(../images/cul05.jpg) no-repeat;
 	}
 	li:nth-of-type(6) {
-		left:988px;
+		background: url(../images/cul06.jpg) no-repeat;
 	}
-	a {
-		position: relative;
-		display:block;
-		width:100%;
-		height:100%;
-	}
-	i {
+	li i {
 		position: absolute;
-		top:0;
-		left:0;
-		display:block;
-		width:100%;
-		height:100%;
-		transition: background 0.5s;
+		display: block;
+		width: 100%;
+		height: 280px;
+		background: rgba(0,0,0,0.3);
+		transition: 0.5s;
+	}
+	li:first-of-type i {
+		background: rgba(255,255,255,0.1);
+	}
+	li i:hover {
+		transition: 0.5s;
 	}
 }
 

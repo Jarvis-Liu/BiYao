@@ -1,57 +1,68 @@
-$(function () {
-	function slidActive() {
-		var timer01;
-		var q_li = $("#banner-slider ul li");
-		var q_spanL = $(".slider_left");
-		var q_spanR = $(".slider_right");
-		var q_oli = $("#banner ol li");
-		var i = 0;
-		timer01 = setInterval(active,2000);
-		$("#banner-slider ul").mouseenter(function() {
-			clearInterval(timer01);
-		})
-		$("#banner-slider ul").mouseleave(function() {
-			timer01 = setInterval(active,2000)
-		})
-		q_spanL.click(function() {
-				i -= 1;
-				if (i < 0) {
-					i = 5;
+$(function(){
+	function imgAtive() {
+	    var timer = null;
+	    var cur = 0;
+	    var len = $("#banner ol li").length;
+
+	    //鼠标滑过容器停止播放
+	    $("#banner-slider").hover(function(){
+	        clearInterval(timer);
+	    },function(){
+	        showImg();
+	    });
+	    // 遍历所有圆点导航实现划过切换至对应的图片
+	    $("#banner ol li").click(function(){
+	    	console.log("aaa");
+	        clearInterval(timer);
+	        cur = $(this).index();
+	        $(this).addClass("ora").siblings().removeClass("ora");
+	        $("#banner-slider ul li").eq(cur).fadeIn(1000).siblings("li").fadeOut(1000);
+	    });
+	    $(".slider_left").click(function() {
+	    	console.log("a");
+	    	cur--;
+	    	if( cur<0 ){ cur=len; }
+	    	$("#banner ol li").eq( cur ).addClass("ora").siblings().removeClass("ora");
+	    	$("#banner-slider ul li").eq(cur).fadeIn(1000).siblings("li").fadeOut(1000);
+	    })
+	    $(".slider_right").click(function() {
+	    	console.log("a");
+	    	cur++;
+	    	if( cur>=len ){ cur=0; }
+	    	$("#banner ol li").eq( cur ).addClass("ora").siblings().removeClass("ora");
+	    	$("#banner-slider ul li").eq(cur).fadeIn(1000).siblings("li").fadeOut(1000);
+	    })
+
+	    //定义图片切换函数
+	    function showImg(){
+	        timer = setInterval(function(){
+	            cur++;
+	            if( cur>=len ){ cur=0; }
+	            $("#banner-slider ul li").eq( cur ).fadeIn(1000).siblings("li").fadeOut(1000);
+	            $("#banner ol li").eq( cur ).addClass("ora").siblings().removeClass("ora");
+
+	        },2000);
+	    }
+	    showImg();
+	}
+	imgAtive();
+
+	function imgHover() {
+		var $culling = $(".culling");
+		var $li = $(".culling li");
+		var $i = $(".culling i");
+		for (var i = 0; i < $li.length; i++) {
+			$li[i].index = i;
+			$li[i].onmouseenter = function() {
+				for (var k = 0; k < $li.length; k++) {
+					$li[k].style.width = "82px";
+					$i[k].style.backgroundColor = "rgba(0,0,0,0.3)";
 				}
-				$(".show").toggleClass("show");
-				q_li.eq(i).toggleClass("show");
-				$(".ora").toggleClass("ora");
-				q_oli.eq(i).toggleClass("ora");
-				timer01 = setInterval(active,2000)
-		})
-		q_spanR.click(function() {
-				i += 1;
-				if (i > 5) {
-					i = 0;
-				}
-				$(".show").toggleClass("show");
-				q_li.eq(i).toggleClass("show");
-				timer01 = setInterval(active,2000)
-		})
-		function active() {
-			i = $(".show").index();
-			$(".show").animate({opacity : "0"},1000);
-			$(".ora").toggleClass("ora");
-			if (i >= 5) {
-				i = -1;
-			}
-			q_oli.eq(i + 1).toggleClass("ora");
-			q_li.eq(i + 1).animate({opacity : "1"},1000);
-			if ($(".show").css("opacity") == 0) {
-				$(".show").toggleClass("show");
-				if (i < 5) {
-					i++;
-				}else {
-					i = 0;
-				}
-				q_li.eq(i).toggleClass("show");
+				$i[this.index].style.backgroundColor = "rgba(255,255,255,0.1)";
+				this.style.width = "620px";
+				this.style.transition = "0.5s";
 			}
 		}
 	}
-	slidActive();
-})
+	imgHover();
+});
