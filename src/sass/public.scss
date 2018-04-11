@@ -332,6 +332,10 @@ nav {
 		display:none;
 		background: url(../images/shirt/rightBar-serve.png);
 	}
+	.rightBar-serve:hover {
+		display:block;
+		background: url(../images/shirt/rightBar-serveActive.png);
+	}
 	.rightBar-phone {
 		display: none;
 		background:url(../images/shirt/rightBar-phone.png);
